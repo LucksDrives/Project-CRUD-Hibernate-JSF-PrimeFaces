@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+<h:head>
+
+</h:head>
+
+<header>
+	<img
+		src="https://live.staticflickr.com/65535/52122578253_b56df00594_h.jpg"
+		style="width: 100%; border-radius: 35px; height: 250px; margin-bottom: -160px;"></img>
+</header>
+
+<h:body>
+	<p:panel header="Listagem de Produtos" style="text-align: center; font-size: 35px;">
+		<h:form>
+			<p:dataTable value="#{produtoDAO.todosProdutos}" var="p" rows="10"
+				stripedRows="true" paginator="true" paginatorPosition="bottom"
+				liveResize="true" draggableColumns="true" resizableColumns="true">
+
+				<p:column headerText="Nome  " style="text-align: center">
+					<h:outputText value="#{p.nome}" />
+				</p:column>
+
+				<p:column headerText="Valor⠀⠀" style="text-align: center">
+					<h:outputText value="#{p.valor}" />
+				</p:column>
+				
+				<p:column headerText="Quantidade⠀⠀" style="text-align: center">
+					<h:outputText value="#{p.quantidade}" />
+				</p:column>
+
+			</p:dataTable>
+			<p:button style="width: 10; margin: 10px" value="Voltar ao Inicio"
+					href="../Interface/InterfaceGeral.xhtml"
+					styleClass="ui-button-raised ui-button-danger" />		
+		</h:form>
+	</p:panel>
+</h:body>
+
+</html>

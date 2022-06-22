@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+
+</h:head>
+
+<header>
+	<img
+		src="https://live.staticflickr.com/65535/52122578253_b56df00594_h.jpg"
+		style="width: 100%; border-radius: 35px; margin-bottom: -220px"></img>
+</header>
+
+<h:body>
+	<center>
+		<h:form>
+			<h2>
+				<h:outputText value="Editar Produto" />
+			</h2>
+			<p:outputLabel value="ID    ⠀⠀⠀" />
+			<p:inputText value="#{produtoDAO.produto.id}" />
+			<br />
+			<br />
+
+			<p:outputLabel value="Nome  " />
+			<p:inputText value="#{produtoDAO.produto.nome}" />
+			<br />
+			<br />
+
+			<p:outputLabel value="Valor ⠀" />
+			<p:inputText value="#{produtoDAO.produto.valor}" />
+			<br />
+			<br />
+			<br />
+
+			<p:button style="width: 10; margin: 10px" value="Voltar"
+				href="../Interface/InterfaceGeral.xhtml"
+				styleClass="ui-button-raised ui-button-danger" />
+			<p:commandButton style="width: 10%" value="Editar" action="#{produtoDAO.alteraGame}"
+				onclick="alert('Produto Editado com Sucesso!')"
+				href="../Interface/InterfaceGeral.xhtml"
+				styleClass="ui-button-raised ui-button-success" />
+			<br></br>
+			<br></br>
+		</h:form>
+	</center>
+
+</h:body>
+
+<footer>
+
+	<img
+		src="https://live.staticflickr.com/65535/52124871611_c6d61a80a5_h.jpg"
+		style="width: 100%; border-radius: 35px; padding-top: 170px"></img>
+
+</footer>
+
+</html>
